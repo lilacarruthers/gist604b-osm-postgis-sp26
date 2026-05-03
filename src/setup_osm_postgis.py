@@ -70,8 +70,6 @@ def setup_osm_postgis(
     # Step 8: Load shapefiles into PostGIS using shp2pgsql
     # Step 9: Close connections
 
-    # IMPORTANT: Remove this line after correctly implementing the function.
-
     # Step 1: Setup data directory
     if data_dir is None:
         data_dir = Path(f"../data/{db_name}")
