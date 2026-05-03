@@ -72,33 +72,6 @@ def setup_osm_postgis(
 
     # IMPORTANT: Remove this line after correctly implementing the function.
 
-def setup_osm_postgis(
-    osm_url: str,
-    db_name: str = "osm_db",
-    user: str = "postgres",
-    password: str = "postgres",
-    host: str = "localhost",
-    port: int = 5432,
-    data_dir: Optional[Path] = None,
-    load_shapefiles: Optional[list[str]] = None
-) -> None:
-
-    """
-    Set up a PostGIS database and load OSM shapefile data from Geofabrik.
-
-    Args:
-        osm_url: URL to Geofabrik shapefile ZIP
-        db_name: Name of the database to create/use
-        user: PostgreSQL username
-        password: PostgreSQL password
-        host: Database host
-        port: Database port
-        data_dir: Optional directory to store downloaded OSM data
-        load_shapefiles: Optional list of shapefile layer names to load
-    Returns:
-        None
-    """
-
     # Step 1: Setup data directory
     if data_dir is None:
         data_dir = Path(f"../data/{db_name}")
