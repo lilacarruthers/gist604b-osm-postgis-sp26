@@ -17,8 +17,6 @@ import zipfile
 from pathlib import Path
 from typing import Optional
 
-# Function: Setup PostGIS + Load OSM Shapefile Data
-
 def setup_osm_postgis(
     osm_url: str,
     db_name: str = "osm_db",
@@ -29,46 +27,22 @@ def setup_osm_postgis(
     data_dir: Optional[Path] = None,
     load_shapefiles: Optional[list[str]] = None
 ) -> None:
-    """
-    Create a PostGIS database and load Geofabrik shapefile data.
 
-    This function performs a complete workflow:
-    - Connect to PostgreSQL
-    - Create a new database
-    - Enable PostGIS extension
-    - Download shapefile data from Geofabrik
-    - Unzip shapefile data
-    - Load shapefiles into PostGIS using shp2pgsql
+    """
+    Set up a PostGIS database and load OSM shapefile data from Geofabrik.
 
     Args:
         osm_url: URL to Geofabrik shapefile ZIP
-        db_name: Name of the database to create
+        db_name: Name of the database to create/use
         user: PostgreSQL username
         password: PostgreSQL password
         host: Database host
         port: Database port
         data_dir: Optional directory to store downloaded OSM data
         load_shapefiles: Optional list of shapefile layer names to load
-
     Returns:
         None
-
-    Example:
-        >>> setup_osm_postgis(
-        ...     osm_url="https://download.geofabrik.de/north-america/us/arizona-latest-free.shp.zip", db_name="arizona", load_shapefiles=["places_a", "pois"]
-        ... )
     """
-
-    # TODO: Implement this function
-    # Step 1: Setup data directory
-    # Step 2: Download shapefile ZIP data
-    # Step 3: Connect to PostgreSQL (default database)
-    # Step 4: Create the working database
-    # Step 5: Connect to the new database
-    # Step 6: Enable PostGIS
-    # Step 7: Unzip shapefile data
-    # Step 8: Load shapefiles into PostGIS using shp2pgsql
-    # Step 9: Close connections
 
     # Step 1: Setup data directory
     if data_dir is None:
@@ -225,3 +199,4 @@ def setup_osm_postgis(
     conn.close()
 
     print("Database connection closed")
+    
