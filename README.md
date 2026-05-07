@@ -1,6 +1,21 @@
-# GIST 604B – OSM & PostGIS
+# OSM & PostGIS Spatial Analysis
 
-Repository for working with OSM spatial data using PostgreSQL and PostGIS.
+**Student:** Lila Carruthers  
+**Course:** GIST 604B – Open Source GIS  
+**Module:** Module 5: OSM & PostGIS Spatial Analysis
+**University of Arizona**  
+
+## Project Description
+Not completed.
+
+## Tools and Technologies
+Not completed.
+
+## What I Did
+Not completed.
+
+## How to View / Run
+Not completed.
 
 ## Repository Structure
 
@@ -24,10 +39,3 @@ Repository for working with OSM spatial data using PostgreSQL and PostGIS.
     ├── pyproject.toml
     ├── uv.lock
     └── README.md
-
-## Notes
-
-- Notebooks are for exploration and learning.
-- sql/arizona folder contains sql scripts discussed in the lectures.
-- Data is downloaded and prepared inside the Codespace environment and is not stored in this repository.
-- The database runs in a separate PostGIS container using Docker.
